@@ -24,7 +24,7 @@ const importData = async () => {
 
     const sampleProducts = products.map((product) => {
       return { ...product, user: adminUser };
-    });
+    }); 
 
     await Product.insertMany(sampleProducts);
 
@@ -39,7 +39,7 @@ const importData = async () => {
 const destroyData = async () => {
   try {
     await Order.deleteMany();
-    await Product.deleteMany();
+    await Product.deleteMany(); //mongo method
     await User.deleteMany();
 
     console.log('Data Destroyed!'.red.inverse);
@@ -52,7 +52,7 @@ const destroyData = async () => {
 
 // process.argv is an array that contains command line arguments passed when node js process starts. It is a property of 
 // global process object.
-if (process.argv[2] === '-d') {
+if (process.argv[2] === '-d') {      //1 path 2  script 3 user def args  
   destroyData();
 } else {
   importData();

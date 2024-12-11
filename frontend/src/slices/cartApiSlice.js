@@ -9,7 +9,7 @@ export const cartApiSlice = apiSlice.injectEndpoints({
     addItemToCart: builder.mutation({
       query: (item) => ({
         url: '/api/cart',
-        method: 'POST',
+        method: 'POST',    //put or post mutation otherwise query 
         body: item,
       }),
       invalidatesTags: ['Cart'],

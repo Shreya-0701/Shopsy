@@ -66,7 +66,7 @@ const UserListScreen = () => {
                   <td>
                     {!user.isAdmin && (
                       <>
-                        <Button
+                        {/* <Button
                           as={Link}
                           to={`/admin/user/${user._id}/edit`}
                           style={{ marginRight: '10px' }}
@@ -74,7 +74,7 @@ const UserListScreen = () => {
                           className='btn-sm'
                         >
                           <FaEdit />
-                        </Button>
+                        </Button> */}
                         <Button
                           variant='danger'
                           className='btn-sm'
